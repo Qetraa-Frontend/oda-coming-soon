@@ -1,0 +1,226 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+        --background: 0 0% 100%;
+        --foreground: 240 10% 3.9%;
+        --card: 0 0% 100%;
+        --card-foreground: 240 10% 3.9%;
+        --popover: 0 0% 100%;
+        --popover-foreground: 240 10% 3.9%;
+        --primary: 75, 75%, 74%;
+        --primary-foreground: 75, 75%, 74%;
+        --secondary: 73, 69%, 76%;
+        --secondary-foreground: 73, 69%, 76%;
+        --muted: 240 4.8% 95.9%;
+        --muted-foreground: 240 3.8% 46.1%;
+        --accent: 240 4.8% 95.9%;
+        --accent-foreground: 240 5.9% 10%;
+        --destructive: 0 84.2% 60.2%;
+        --destructive-foreground: 0 0% 98%;
+        --border: 240 5.9% 90%;
+        --input: 240 5.9% 90%;
+        --ring: 240 10% 3.9%;
+        --chart-1: 12 76% 61%;
+        --chart-2: 173 58% 39%;
+        --chart-3: 197 37% 24%;
+        --chart-4: 43 74% 66%;
+        --chart-5: 27 87% 67%;
+        --radius: 0.5rem;
+        --font-albert-sans: "Albert Sans";
+    }
+  .dark {
+        --background: 240 10% 3.9%;
+        --foreground: 0 0% 98%;
+        --card: 240 10% 3.9%;
+        --card-foreground: 0 0% 98%;
+        --popover: 240 10% 3.9%;
+        --popover-foreground: 0 0% 98%;
+        --primary: 75, 75%, 74%;
+        --primary-foreground: 74, 67%, 66%;
+        --secondary: 73, 69%, 76%;
+        --secondary-foreground: 74, 71%, 76%;
+        --muted: 240 3.7% 15.9%;
+        --muted-foreground: 240 5% 64.9%;
+        --accent: 240 3.7% 15.9%;
+        --accent-foreground: 0 0% 98%;
+        --destructive: 0 62.8% 30.6%;
+        --destructive-foreground: 0 0% 98%;
+        --border: 240 3.7% 15.9%;
+        --input: 240 3.7% 15.9%;
+        --ring: 240 4.9% 83.9%;
+        --chart-1: 220 70% 50%;
+        --chart-2: 160 60% 45%;
+        --chart-3: 30 80% 55%;
+        --chart-4: 280 65% 60%;
+        --chart-5: 340 75% 55%;
+        --font-albert-sans: "Albert Sans";
+    }
+}
+
+body {
+    font-family: 'Albert Sans', Arial, sans-serif;
+}
+
+@layer base {
+  * {
+        @apply border-border;
+    }
+  body {
+        @apply bg-background text-foreground;
+    }
+}
+
+div[role="dialog"] > button:first-child { display: none; }
+
+.swiper.hero-slider {
+    width: 100%;
+    height: 140px!important;
+    position: relative;
+    left: 140px;
+    top: 655px;
+}
+
+.hero-slider .swiper-slide {
+    max-width: 277px;
+    height: 140px!important;
+    transition: border 0.3s ease;
+    cursor: pointer!important;
+}
+
+.hero-slider .swiper-slide img {
+    border-radius: 8px;
+    width: 100%!important;
+    height: 100%!important;
+}
+
+.hero-slider .swiper-slide-active {
+    border: 2px solid #fff;
+    border-radius: 8px;
+}
+
+.hero-slider .swiper-wrapper {
+    margin-left: 14px;
+    height: 140px!important;
+}
+
+.hero-slider .swiper-pagination {
+    position: absolute;
+    left: -4px!important;
+    top: 40%!important;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 140px!important;
+    width: 3%!important;
+}
+
+.hero-slider .swiper-pagination-bullet {
+    width: 10px;
+    height: 10px;
+    margin-block: 1px!important;
+    background-color: #fff!important;
+    opacity: 0.7;
+    transition: background-color 0.3s, opacity 0.3s;
+}
+
+.hero-slider .swiper-pagination-bullet-active {
+    background-color: #fff;
+    opacity: 1;
+}
+
+@media (max-width: 1280px) {
+    .hero-slider .swiper-slide {
+        height: 100px!important;
+    }
+}
+
+.stories-slider .swiper-wrapper {
+    height: 525px;
+}
+
+.testimonials-slider .swiper-wrapper {
+    height: 420px;
+}
+
+.stories-slider .swiper-button-next,
+.stories-slider .swiper-button-prev,
+.testimonials-slider .swiper-button-next,
+.testimonials-slider .swiper-button-prev {
+   position: absolute;
+   top: 93%;
+   right: 0!important;
+   left: initial!important;
+   color: #222;
+   background-color: #fff;
+   height: 40px;
+   width: 40px;
+   border-radius: 100%;
+}
+
+.testimonials-slider .swiper-button-next {
+    left: 52%!important;
+}
+
+.testimonials-slider .swiper-button-prev {
+    left: 48%!important;
+}
+
+@media (max-width: 1291px) {
+    .testimonials-slider .swiper-button-next {
+        left: 58%!important;
+    }
+
+    .testimonials-slider .swiper-button-prev {
+        left: 42%!important;
+    }
+}
+
+.stories-slider .swiper-button-prev {
+    right: 55px!important;
+}
+
+.stories-slider .swiper-button-next::after,
+.testimonials-slider .swiper-button-next::after {
+    content: '→';
+    font-size: 25px;
+    position: relative;
+    bottom: 3px;
+}
+
+.stories-slider  .swiper-button-prev::after,
+.testimonials-slider .swiper-button-prev::after {
+    content: '←';
+    font-size: 25px;
+    position: relative;
+    bottom: 3px;
+}
+
+.gradient-container {
+    background: linear-gradient(to right, #C8E36F 36%, white 20%);
+}
+
+@media (max-width: 768px) {
+    .gradient-container {
+        background: white;
+    }
+}
+
+@keyframes wiggle {
+    0%, 100% {
+        transform: rotate(15deg);
+    }
+    25% {
+        transform: rotate(17deg);
+    }
+    75% {
+        transform: rotate(13deg);
+    }
+}
+
+.animate-wiggle:hover {
+    animation: wiggle 0.2s ease-in-out infinite;
+}
