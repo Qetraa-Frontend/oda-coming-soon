@@ -20,7 +20,6 @@ export default function Hero({
                     <PopupButton
                         className="bg-transparent hover:bg-white text-white hover:text-black py-1 md:py-2 px-4 md:px-8 border border-white hover:border-transparent rounded transition-all duration-1000 text-lg md:text-2xl font-medium mt-12 md:mt-24 inline-block"
                         id="wQAxTCsy"
-                        size={500}
                     >
                         {buttonText}
                     </PopupButton>
