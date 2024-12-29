@@ -137,8 +137,9 @@ export default function Navbar() {
                             className="bg-cover bg-no-repeat border-b-transparent"
                             side="top"
                             style={{
-                                backgroundImage: "url(/images/pages/home/hero/hero_1.png)",
+                                backgroundImage: "url(/images/hero_1.png)",
                                 minHeight: 1021,
+                                overflowY: "auto",
                             }}
                         >
                             <div className="absolute inset-0 bg-black bg-opacity-70" />
